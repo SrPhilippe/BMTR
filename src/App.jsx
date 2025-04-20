@@ -28,7 +28,7 @@ export default function TriaxxPasswordApp() {
     <div className='min-h-screen flex items-center justify-center bg-gray-100 p-4'>
       <Card className='w-full max-w-md shadow-xl rounded-2xl'>
         <CardContent className='p-6 space-y-6'>
-          <h1 className='text-2xl font-bold text-center'>TRIAXX Password Generator</h1>
+          <h1 className='text-2xl font-bold text-center'>Password Generator</h1>
           <div className='space-y-4'>
             <div>
               <Label htmlFor='day' className='mb-1'>
@@ -42,8 +42,8 @@ export default function TriaxxPasswordApp() {
               </Label>
               <Input id='month' type='number' min='1' max='12' value={month} onChange={e => setMonth(e.target.value)} />
             </div>
-            <Button className='w-full cursor-pointer' onClick={handleCalculate}>
-              Generate Password
+            <Button className='w-full cursor-pointer bg-sky-800 text-lg py-6' onClick={handleCalculate}>
+              Generate
             </Button>
             {password && (
               <div className='text-center text-xl font-semibold'>
