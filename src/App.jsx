@@ -3,9 +3,10 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
+// import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 
 export default function TriaxxPasswordApp() {
-  const today = new Date()
+  const [today] = useState(new Date())
   const [day, setDay] = useState(String(today.getDate()))
   const [month, setMonth] = useState(String(today.getMonth() + 1))
   const [password, setPassword] = useState('')
@@ -28,7 +29,7 @@ export default function TriaxxPasswordApp() {
     // Set initial password
     const currentPassword = calculatePassword(today.getDate(), today.getMonth() + 1)
     setPassword(currentPassword)
-  }, [])
+  }, [today])
 
   const handleCalculate = () => {
     const parsedDay = parseInt(day, 10)
