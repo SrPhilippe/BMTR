@@ -31,7 +31,7 @@ export default function TriaxxApp() {
 
     const defaultPassword = calculatePrincipalPassword(day, month)
     setPrincipalPassword(defaultPassword)
-  }, [])
+  }, [day, month])
 
   const toggleDarkMode = () => {
     const isDark = document.documentElement.classList.toggle('dark')
@@ -84,7 +84,7 @@ export default function TriaxxApp() {
       </Button>
 
       <Tabs defaultValue='principal' className='max-w-md mx-auto mt-16'>
-        <TabsList className='grid grid-cols-2 w-full'>
+        <TabsList className='grid grid-cols-2 w-full dark:bg-gray-800'>
           <TabsTrigger value='principal'>TRBM</TabsTrigger>
           <TabsTrigger value='periodic'>Periódica</TabsTrigger>
         </TabsList>
